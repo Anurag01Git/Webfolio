@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cursor effect -->
+  <div class="cursor"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="animate-text">Hi, I’m <span>Anurag Sharma</span></h1>
+      <h2 class="animate-text delay">Senior Technical Hiring Consultant</h2>
+      <a href="#projects" class="btn btn-hero">View My Work</a>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="reveal">
+    <div class="about-container">
+      <img src="Image.jpg" alt="Profile" class="about-img">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a Senior Technical Hiring Consultant with expertise in connecting top engineering talent with innovative organizations. With a strong background in technology recruitment, I specialize in sourcing, screening, and building teams across frontend, backend, full-stack, and emerging tech roles. I combine deep industry knowledge with a people-first approach to deliver hiring strategies that drive business success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="reveal">
+    <h2>Skill Expertise</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <span>Development Skills (Front End and Back End or Full Stack)</span>
+        <div class="skill-bar"><div class="skill-fill" data-fill="100%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Creative (UX/UI Designer / UX Resercher / Technical Writer / Content Strategist)</span>
+        <div class="skill-bar"><div class="skill-fill" data-fill="95%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Project Management</span>
+        <div class="skill-bar"><div class="skill-fill" data-fill="88%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Techno Functional</span>
+        <div class="skill-bar"><div class="skill-fill" data-fill="80%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="https://source.unsplash.com/600x400/?website" alt="Project 1">
+        <div class="overlay">
+          <h3>Project One</h3>
+          <p>Creative landing page design with animations.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/600x400/?app" alt="Project 2">
+        <div class="overlay">
+          <h3>Project Two</h3>
+          <p>Interactive portfolio showcase website.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/600x400/?dashboard" alt="Project 3">
+        <div class="overlay">
+          <h3>Project Three</h3>
+          <p>Modern dashboard with custom animations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Anurag Sharma. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Twitter</a>
+      <a href="https://www.linkedin.com/in/anurag-sharma-368421192/">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
