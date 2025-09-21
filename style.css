@@ -272,50 +272,75 @@ body {
   100% { transform: translateY(0) scale(1); }
 }
 
-/* Projects Section */
-#projects {
+/* Certifications Section */
+#certifications {
   padding: 5rem 10%;
 }
-.projects-grid {
+#certifications h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00ffcc;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #00ffcc, #00aaff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 5s linear infinite;
+}
+.certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-.project-card {
-  position: relative;
-  overflow: hidden;
+.certificate-card {
+  background: #111;
   border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  perspective: 1000px;
+  overflow: hidden;
+}
+.certificate-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+}
+.certificate-card img {
+  width: 80px;
+  margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
-.project-card:hover {
-  transform: rotateY(8deg) scale(1.03);
+.certificate-card h3 {
+  margin-bottom: 0.5rem;
 }
-.project-card img {
-  width: 100%;
-  display: block;
-  transition: transform 0.5s ease;
-}
-.project-card:hover img {
-  transform: scale(1.15);
-}
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease;
-}
-.overlay h3 {
+.arrow {
+  font-size: 1.5rem;
   color: #00ffcc;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
 }
-.project-card:hover .overlay {
+.certificate-card:hover .arrow {
+  transform: translateX(5px) scale(1.2);
+}
+.certificate-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 90%;
+  max-width: 220px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+.certificate-card:hover .certificate-popup {
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
@@ -394,7 +419,9 @@ footer .socials a:hover {
   #about .about-container {
     flex-direction: column;
   }
-  #skills .skills-container, #clients .clients-container, #projects .projects-grid {
+  #skills .skills-container,
+  #clients .clients-container,
+  #certifications .certifications-grid {
     grid-template-columns: 1fr;
   }
 }
